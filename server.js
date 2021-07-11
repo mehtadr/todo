@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 
 // Route Files
 const todos = require("./routes/todo");
+const category = require("./routes/category");
 
 // Log Fils
 const logger = require("./middleware/logger");
@@ -15,6 +16,7 @@ const app = express();
 app.use(logger);
 
 app.use("/api/v1/todo", todos);
+app.use("/api/v1/category", category);
 
 PORT = process.env.PORT || 5000;
 
